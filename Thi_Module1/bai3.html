@@ -9,5 +9,29 @@
 </body>
 </html>
 <script>
-    function cuont(number, )
+    let chuoi = []
+    let a
+    let x = prompt("Số phần tử muốn nhập")
+    for (let i = 0; i < x; i++) {
+        a = prompt("Phần tử " + i)
+        chuoi.push(a)
+    }
+    function Kiemtra(chuoi, number) {
+        let count = 0
+        for (let i = 0; i < number.length; i++)
+            for (let j = 0; j < chuoi.length; j++) {
+                if (chuoi[j] === number[i]){
+                    count++
+            }
+        }
+
+        if (count === 0){
+            console.log(false)
+        }
+        else {
+            console.log(count)
+        }
+    }
+    let number = ["a", "o", "e", "u", "i"]
+    Kiemtra(chuoi, number)
 </script>
