@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isNumber(x, number) {
+        let stt = 1
+        for (let i = 0; i < number.length; i++) {
+            if (x === number[i]) {
+                stt += i
+            }
+        }
+        return stt
+    }
+
+    function kiemTra(x, number) {
+        let check
+        for (let i = 0; i < number.length; i++) {
+            if (x === number[i]) {
+                check = true
+                break;
+            }
+            else {
+                check = false
+            }
+        }
+        if (check === true) {
+            alert("số " + x + "thuộc mảng")
+        }
+        else {
+            alert("số " + x + ' không thuộc mảng')
+        }
+    }
+    let  x = prompt("Nhập số")
+    let number = [1, 4, 6, 8, 9]
+    isNumber(x, number)
+    kiemTra(x, number)
+</script>
